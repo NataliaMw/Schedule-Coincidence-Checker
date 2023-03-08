@@ -1,0 +1,26 @@
+{
+  "name": "schedule-coincidence-ioet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test":"jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NataliaMw/Schedule-Coincidence-ioet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NataliaMw/Schedule-Coincidence-ioet/issues"
+  },
+  "homepage": "https://github.com/NataliaMw/Schedule-Coincidence-ioet#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
