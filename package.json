@@ -1,9 +1,10 @@
 {
   "name": "schedule-coincidence-ioet",
   "version": "1.0.0",
-  "description": "",
+  "description": "ioet exercise solution for schedule coincidence",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test":"jest"
   },
   "jest": {
@@ -14,7 +15,7 @@
     "url": "git+https://github.com/NataliaMw/Schedule-Coincidence-ioet.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Natalia Mawyin <mnmawyin@espol.edu.ec>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NataliaMw/Schedule-Coincidence-ioet/issues"
