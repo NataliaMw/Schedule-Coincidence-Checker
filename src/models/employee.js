@@ -4,5 +4,5 @@ class Employee {
         this.name = name;
         this.schedules = schedules;
     }
-    }
+}
 module.exports = Employee;
