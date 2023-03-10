@@ -1,7 +1,8 @@
 //create model for employee
 class Employee {
-    constructor(name, schedule) {
+    constructor(name,schedules) {
         this.name = name;
-        this.schedule = new Schedule(schedule);
+        this.schedules = schedules;
     }
     }
+module.exports = Employee;
