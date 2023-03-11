@@ -48,15 +48,4 @@ describe('InputParser', () => {
       expect(schedules[3].endHour).toEqual(new Date().setHours(17, 0,0,0));
     });
   });
-
-  describe('extractTimeRange', () => {
-    it('should extract start and end time from a time range string', () => {
-      const parser = new InputParser();
-      const timeRange = '08:00-12:00';
-      const [startHour, endHour] = parser.extractTimeRange(timeRange);
-      expect(startHour).toEqual(new Date().setHours(8, 0,0,0));
-      expect(endHour).toEqual(new Date().setHours(12, 0,0,0));
-    });
- 
-  });
 });

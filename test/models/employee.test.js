@@ -18,7 +18,7 @@ describe('Employee', function() {
         });
     });
 
-    describe('#coincidences()', function() {
+    describe('#coincidence()', function() {
         it('should return true if schedules coincidence', function() {
             const schedules = [
                 new Schedule('MO', new Date().setHours(9, 0), new Date().setHours(12, 0)),
@@ -26,7 +26,7 @@ describe('Employee', function() {
                 new Schedule('MO', new Date().setHours(10, 0), new Date().setHours(11, 0))
             ];
             const employee = new Employee('A', schedules);
-            assert.equal(employee.schedules[0].coincidences(employee.schedules[1]), true);
+            assert.equal(employee.schedules[0].coincidence(employee.schedules[1]), true);
         });
     });
 });
