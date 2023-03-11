@@ -25,7 +25,8 @@ Finally, the main class is the index.js file. It is the entry point of the proje
 #### Diagram of the architecture :triangular_ruler:
 The diagram was based on the MVC pattern.
 
-![Diagram of the architecture]()
+![Diagram of the architecture](https://user-images.githubusercontent.com/67672070/224466872-5d5ff06e-fb56-45eb-8260-039195d795e9.png)
+
 
 ## Aproach and methodology :bulb:
 
