@@ -5,12 +5,12 @@ class Schedule {
         this.startHour = startHour;
         this.endHour = endHour;
     }
-    overlaps(schedule) {
+    coincidences(schedule) {
         return this.day === schedule.day && this.startHour <= schedule.endHour && this.endHour >= schedule.startHour;
     }
     toString() {
         return `${this.day} ${this.startHour} ${this.endHour}`;
     }
-    
+
   }
 module.exports = Schedule;
