@@ -12,15 +12,23 @@ class InputParser {
    * @returns {Array<Employee>} An array of Employee objects.
    */
   parseInputFile(inputFilePath) {
-    const fileContent = fs.readFileSync(inputFilePath, 'utf-8');
-    const employeeDataArray = this.extractEmployeeData(fileContent);
-    const employees = employeeDataArray.map((employeeData) => {
-      const [name, scheduleData] = this.extractNameAndScheduleData(employeeData);
-      const schedules = this.extractSchedules(scheduleData);
+    let employees = [];
 
-      return new Employee(name, schedules);
-    });
+    try {
+      const fileContent = fs.readFileSync(inputFilePath, 'utf-8');
+      const employeeDataArray = this.extractEmployeeData(fileContent);
 
+      employees = employeeDataArray.map((employeeData) => {
+        const [name, scheduleData] = this.extractNameAndScheduleData(employeeData);
+        const schedules = this.extractSchedules(scheduleData);
+
+        return new Employee(name, schedules);
+      });
+    } catch (err) {
+      console.error(`Error parsing input file: ${err}`);
+      employees = [];
+    }
+    
     return employees;
   }
 
