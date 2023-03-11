@@ -7,10 +7,7 @@ class InputParser {
     parseInputFile(inputFilePath) {
         const fileContent = fs.readFileSync(inputFilePath, 'utf-8');
         const employeeDataArray = this.extractEmployeeData(fileContent);
-    
-        const employees = employeeDataArray.map((employeeData) => {
-          employeeData = employeeData.replace('\r', '');
-    
+        const employees = employeeDataArray.map((employeeData) => {    
           const [name, scheduleData] = this.extractNameAndScheduleData(employeeData);
           const schedules = this.extractSchedules(scheduleData);
     
@@ -21,7 +18,7 @@ class InputParser {
       }
 
     extractEmployeeData(employeeData) {
-        return employeeData.replace('\r', '').split('\n');
+        return employeeData.trim().replace('\r', '').split('\n');
     }
     extractNameAndScheduleData(employeeData) {
         return employeeData.split('=');
@@ -39,12 +36,7 @@ class InputParser {
             return new Schedule(day, startHour, endHour);
         });
     }
-    extractTimeRange(timeRange) {
-        return timeRange.split('-').map(time => {
-            const [hours, minutes] = time.split(':');
-            return new Date().setHours(hours, minutes,0,0);
-        });
-    }
+
 }
 
 module.exports = InputParser;

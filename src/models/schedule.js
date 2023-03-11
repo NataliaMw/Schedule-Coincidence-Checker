@@ -5,8 +5,9 @@ class Schedule {
         this.startHour = startHour;
         this.endHour = endHour;
     }
-    coincidences(schedule) {
-        return this.day === schedule.day && this.startHour <= schedule.endHour && this.endHour >= schedule.startHour;
+    coincidence(schedule) {
+        if(this.day !== schedule.day) return false;        
+        return this.startHour <= schedule.endHour && this.endHour >= schedule.startHour;
     }
     toString() {
         return `${this.day} ${this.startHour} ${this.endHour}`;

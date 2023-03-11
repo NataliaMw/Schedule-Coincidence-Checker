@@ -1,6 +1,6 @@
 class CoincidenceService {
     hasCoincidence(schedule1, schedule2) {
-    return schedule1.coincidences(schedule2);
+    return schedule1.coincidence(schedule2);
   }
 
   countCoincidences(employee1, employee2) {
@@ -8,12 +8,10 @@ class CoincidenceService {
     const employee2Schedules = employee2.schedules;
 
     let coincidences = 0;
-
     for (const schedule1 of employee1Schedules) {
       for (const schedule2 of employee2Schedules) {
         if (this.hasCoincidence(schedule1, schedule2)) {
           coincidences++;
-          break;
         }
       }
     }
